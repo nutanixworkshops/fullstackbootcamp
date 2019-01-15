@@ -1,9 +1,10 @@
-Agenda (Day 1)
+SoCal Workshop Agenda
 ++++++++++++++
 
 - Introductions
-- Why Nutanix
-- Nutanix Prism with AHV
-- Deploying and Managing Workloads
-- Files
-- Flow
+- Why Nutanix? Nutanix 101 Whiteboard Review
+- Nutanix Prism with Any Hypervisor Overview
+- The Basics: Storage and Network Configuration Labs
+- Deploying and Managing Workloads - *Windows OR Linux*
+- Nutanix Files (File Services) Overview and Labs
+- Nutanix Flow (Network Microsegmentation) Overview and Labs

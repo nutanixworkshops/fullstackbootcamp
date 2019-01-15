@@ -1,7 +1,7 @@
 .. _lab_manage_workloads:
 
 ------------------------
-Lab - Managing Workloads
+AHV: Managing Workloads
 ------------------------
 
 Overview
@@ -12,7 +12,7 @@ Get experience using VM management tasks from Prism, which include power actions
 Workload Management
 +++++++++++++++++++
 
-Now that you have a couple VMs deployed, let’s have some fun and explore some of the VM management tasks with AHV.
+Now that you have a VM deployed, let’s have some fun and explore some of the VM management tasks with AHV.
 
 Power Actions and Console Access
 ................................
@@ -21,22 +21,19 @@ Explore VM power actions and console access.
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux VM you created in the previous lab (Linux_VM-*initials*). (Use Prism’s search function if necessary)
+Locate the VM you created in the previous lab. (Use Prism’s search function if necessary)
 
 .. note::
 
-  Note that the Power State column for that VM shows a red dot, indicating that the VM is powered off.
+  Note that the Power State column for that VM shows a green dot, indicating that the VM is powered on.
 
-Now lets power on the VM:
-
-Select the VM, then click **Power On** from the **Actions** drop-down menu.
+Select the VM, and review the options available from the **Actions** drop-down menu.
 
 .. note::
 
-  See the list of available actions (Update, Delete, Clone, Launch Console, Power On, Pause/Suspend, Snapshot, Migrate, and so on).
-  Note that Launch Console is shaded. This action is not available because the VM is off.
+  See the list of available actions (Update, Delete, Clone, Launch Console, Power On, Pause/Suspend, Snapshot, Migrate, etc).
 
-Next lets open a console session:
+Next let's open a console session:
 
 Select the VM, then click **Launch Console** from the **Actions** drop-down menu.
 
@@ -50,7 +47,7 @@ Select the VM, then click **Launch Console** from the **Actions** drop-down menu
 
 .. note::
 
-  In ESX:
+  In ESXi:
 
   - The steps in this exercise could also be done from Prism while using an ESXi cluster that has its VMware vCenter instance is registered to Prism.
   - The image below shows the side by side comparison of what the Actions drop down menu would look like for a VM hosted in ESXi versus one hosted in AHV.
@@ -86,26 +83,26 @@ Clone a VM
 
 In **Prism Central > Explore > VMs**.
 
-Find and clone four copies of the CentOS-base virtual machine.
+Find and clone four copies of the virtual machine you previously created.
 
 Select the VM, then click **Clone** from the **Actions** drop-down menu.
 
 Fill out the following fields and click **Save**:
 
-- **Number of Clones** - 4
+- **Number of Clones** - 5
 - **Prefix Name**  - Flow-*initials*-Clone
 - **Starting Index Number** - 1
 
 .. figure:: images/manage_workloads_02.png
 
-Leave them powered off as they are used in the optional Flow Lab.
+Leave them powered off as they are used in the upcoming Flow Lab.
 
 Migrate a VM Between Hosts
 ..........................
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM-*initials*).
+Locate one of your cloned VM's from the previous step.
 
 - If the VM is powered on, power it Off
 
@@ -130,7 +127,7 @@ Configure VM-to-Host Affinity Policies
 
 In **Prism Central > Explore > VMs**.
 
-Locate the Linux Vm from the previous lab (Linux_VM-*initials*).
+Locate one of your VM's from the previous lab.
 
 - If the VM is powered on, power it Off
 
@@ -171,4 +168,4 @@ Takeaways
 +++++++++
 
 - In this lab you got to experience first hand how AHV provides a complete set of tools and actions that can be done manage the VMs in the cluster.
-- It is possible to register an ESXI cluster to Prism and be able to perform some of the basic VM management tasks right from Prism as well.
+- It is possible to register an ESXi cluster to Prism and be able to perform some of the basic VM management tasks right from Prism as well.
